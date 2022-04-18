@@ -1,0 +1,14 @@
+﻿@page "/char"
+
+
+<h1>Char</h1>
+
+
+@code {
+	private WeatherForecast[] forecasts;
+
+	protected override async Task OnInitializedAsync()
+	{
+		forecasts = await ForecastService.GetForecastAsync(DateTime.Now);
+	}
+}
